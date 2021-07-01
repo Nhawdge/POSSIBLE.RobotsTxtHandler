@@ -129,6 +129,7 @@ namespace POSSIBLE.RobotsTxtHandler
             try
             {
                 // By default we will remove the UI and Util URL paths
+                defaultText.Append("Disallow: /" + System.Environment.NewLine);
                 defaultText.Append("Disallow: " + EPiServer.Configuration.Settings.Instance.UIUrl.OriginalString.TrimStart("~".ToCharArray()) + System.Environment.NewLine);
                 defaultText.Append("Disallow: " + EPiServer.Configuration.Settings.Instance.UtilUrl.OriginalString.TrimStart("~".ToCharArray()) + System.Environment.NewLine);
             }
